@@ -1,0 +1,84 @@
+_type: export
+__export_format: 4
+__export_date: 2021-06-21T05:14:09.947Z
+__export_source: insomnia.desktop.app:v2021.3.0
+resources:
+  - _id: req_2b33542d01914453893d5767a1b6658c
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624252321966
+    created: 1624252306177
+    url: "{{ _.local }}/test"
+    name: test-get
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1624252306177
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_b11cd818ef01466faf58583b61a375cd
+    parentId: null
+    modified: 1624252236202
+    created: 1624252236202
+    name: NLW
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_f142a46fd2a94d968189ab92e7d8d0cd
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624252348770
+    created: 1624252342165
+    url: "{{ _.local }}/test-post"
+    name: test-post
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1624252306127
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_4ee827fa0e5700509d0ac9d64460d70458a1d146
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624252287034
+    created: 1624252236316
+    name: Base Environment
+    data:
+      local: http://localhost:3000
+    dataPropertyOrder:
+      "&":
+        - local
+    color: null
+    isPrivate: false
+    metaSortKey: 1624252236316
+    _type: environment
+  - _id: jar_4ee827fa0e5700509d0ac9d64460d70458a1d146
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624252236320
+    created: 1624252236320
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_66c45a71e44c4dd49460c60443deaac5
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624252236211
+    created: 1624252236211
+    fileName: NLW
+    contents: ""
+    contentType: yaml
+    _type: api_spec

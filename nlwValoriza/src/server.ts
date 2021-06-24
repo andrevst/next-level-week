@@ -1,17 +1,14 @@
-import express, { request, response } from "express"
-
+import express from "express";
 // @types/express
+import "reflect-metadata";
+import "./database";
+
+import { router } from "./routes";
 
 const app = express();
 
-// http://localhost:3000
+app.use(express.json());
 
-app.listen(3000, () => console.log("Server is running at port 3000") );
+app.use(router);
 
-app.get("/test", (request, response) => {
-    return response.send("Get server working NLW")
-});
-
-app.post("/test-post", (request, response) => {
-    return response.send("Post working for NLW")
-});
+app.listen(3000, () => console.log("Server is running at port 3000"));

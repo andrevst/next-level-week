@@ -1,21 +1,31 @@
 _type: export
 __export_format: 4
-__export_date: 2021-06-21T05:14:09.947Z
+__export_date: 2021-06-24T05:32:44.177Z
 __export_source: insomnia.desktop.app:v2021.3.0
 resources:
-  - _id: req_2b33542d01914453893d5767a1b6658c
+  - _id: req_0f24152485444a0b85a10d40081284ba
     parentId: wrk_b11cd818ef01466faf58583b61a375cd
-    modified: 1624252321966
-    created: 1624252306177
-    url: "{{ _.local }}/test"
-    name: test-get
+    modified: 1624512705743
+    created: 1624512508192
+    url: "{{ _.local }}/users"
+    name: add user
     description: ""
-    method: GET
-    body: {}
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name" : "Andre",
+        	"email" : "contact@andrevst.dev",
+        	"admin" : true
+        }
     parameters: []
-    headers: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
     authentication: {}
-    metaSortKey: -1624252306177
+    metaSortKey: -1624252306077
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -32,27 +42,6 @@ resources:
     description: ""
     scope: collection
     _type: workspace
-  - _id: req_f142a46fd2a94d968189ab92e7d8d0cd
-    parentId: wrk_b11cd818ef01466faf58583b61a375cd
-    modified: 1624252348770
-    created: 1624252342165
-    url: "{{ _.local }}/test-post"
-    name: test-post
-    description: ""
-    method: POST
-    body: {}
-    parameters: []
-    headers: []
-    authentication: {}
-    metaSortKey: -1624252306127
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: env_4ee827fa0e5700509d0ac9d64460d70458a1d146
     parentId: wrk_b11cd818ef01466faf58583b61a375cd
     modified: 1624252287034

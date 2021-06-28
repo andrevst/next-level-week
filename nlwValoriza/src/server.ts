@@ -3,10 +3,12 @@ import "express-async-errors";
 // @types/express
 import "reflect-metadata";
 import "./database";
-
 import { router } from "./routes";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 // middlewares
 

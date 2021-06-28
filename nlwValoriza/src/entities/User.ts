@@ -1,5 +1,6 @@
 import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
-  import { v4 as uuid } from "uuid";
+import { Exclude } from "class-transformer";
+import { v4 as uuid } from "uuid";
   
   @Entity("users")
   class User {
@@ -15,6 +16,7 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } fro
     @Column()
     admin: boolean;
 
+    @Exclude()
     @Column()
     password: string;
   

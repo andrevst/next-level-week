@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2021-06-24T05:32:44.177Z
+__export_date: 2021-06-29T05:00:01.337Z
 __export_source: insomnia.desktop.app:v2021.3.0
 resources:
   - _id: req_0f24152485444a0b85a10d40081284ba
     parentId: wrk_b11cd818ef01466faf58583b61a375cd
-    modified: 1624512705743
+    modified: 1624867124521
     created: 1624512508192
     url: "{{ _.local }}/users"
     name: add user
@@ -15,8 +15,9 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"name" : "Andre",
-        	"email" : "contact@andrevst.dev",
+        	"name" : "Laisete",
+        	"email" : "elaisete@arquio.dev",
+        	"password" : "bazinga",
         	"admin" : true
         }
     parameters: []
@@ -42,6 +43,214 @@ resources:
     description: ""
     scope: collection
     _type: workspace
+  - _id: req_813dc3f7d19c40d997ccf844601b5856
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624907371000
+    created: 1624907360263
+    url: "{{ _.local }}/users"
+    name: list users
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWlAYXJxdWlvLmRldiIsImlhdCI6MTYyNDg2NDIyMywiZXhwIjoxNjI0OTUwNjIzLCJzdWIiOiI5MmVkMGZlNS1lOTRkLTQ0ZDItOGZhOC1jMWMxNmE2ZDNkYzQifQ.LP_I67AA-FRRC1EuPDK9j1UdpJdLAjUGGQkzwBFuBrM
+      disabled: false
+    metaSortKey: -1624252306064.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_96a3ef4a291a4d91934385cfffc12337
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624867414773
+    created: 1624866425368
+    url: "{{ _.local }}/users/compliments/receive"
+    name: list user compliments received
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWlzZXRlQGFycXVpby5kZXYiLCJpYXQiOjE2MjQ4NjcyMTcsImV4cCI6MTYyNDk1MzYxNywic3ViIjoiODcxN2FkY2EtMmI2Mi00NTk0LTg0ZTktYmVmNTg0OWE3ZDc2In0.1gIYpNmaPLi6Hx3_mocC-Hox_vYVE1jN6qXSHixOk9I
+    metaSortKey: -1624252306052
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_375c51316fd44b5998d9a0083574d211
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624867388775
+    created: 1624867388775
+    url: "{{ _.local }}/users/compliments/send"
+    name: list user compliments sent
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWlzZXRlQGFycXVpby5kZXYiLCJpYXQiOjE2MjQ4NjcyMTcsImV4cCI6MTYyNDk1MzYxNywic3ViIjoiODcxN2FkY2EtMmI2Mi00NTk0LTg0ZTktYmVmNTg0OWE3ZDc2In0.1gIYpNmaPLi6Hx3_mocC-Hox_vYVE1jN6qXSHixOk9I
+    metaSortKey: -1624252306039.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b3caa1abe92248e1981f30d37a3ec41a
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624864240084
+    created: 1624677961806
+    url: "{{ _.local }}/tags"
+    name: add tag
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name" : "cool"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWlAYXJxdWlvLmRldiIsImlhdCI6MTYyNDg2NDIyMywiZXhwIjoxNjI0OTUwNjIzLCJzdWIiOiI5MmVkMGZlNS1lOTRkLTQ0ZDItOGZhOC1jMWMxNmE2ZDNkYzQifQ.LP_I67AA-FRRC1EuPDK9j1UdpJdLAjUGGQkzwBFuBrM
+      disabled: false
+    metaSortKey: -1624252306027
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9ada1a0546c44c5dbc3d3a464f2bf162
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624864875172
+    created: 1624864825178
+    url: "{{ _.local }}/tags"
+    name: list tag
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsYWlAYXJxdWlvLmRldiIsImlhdCI6MTYyNDg2NDIyMywiZXhwIjoxNjI0OTUwNjIzLCJzdWIiOiI5MmVkMGZlNS1lOTRkLTQ0ZDItOGZhOC1jMWMxNmE2ZDNkYzQifQ.LP_I67AA-FRRC1EuPDK9j1UdpJdLAjUGGQkzwBFuBrM
+      disabled: false
+    metaSortKey: -1624252306002
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_847bd09c16ad44c6b405135761c43df6
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624867366585
+    created: 1624688149004
+    url: "{{ _.local }}/compliments"
+    name: make compliment
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"user_receiver" : "8717adca-2b62-4594-84e9-bef5849a7d76",
+        	"user_sender" : "03a1330c-6a09-4fdc-bfa7-79fc2f079200",
+        	"tag_id" : "43bc21fc-bc95-4cd6-8817-9e0610149357",
+        	"message" : "how u doin"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication: {}
+    metaSortKey: -1624252305977
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1da428d8c6b84c3d8b38ed47db66b79b
+    parentId: wrk_b11cd818ef01466faf58583b61a375cd
+    modified: 1624867217950
+    created: 1624690999587
+    url: "{{ _.local }}/login"
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email" : "elaisete@arquio.dev",
+        	"password" : "bazinga"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7389f3bfcb994f11834efd8bd5d00a41
+    authentication: {}
+    metaSortKey: -1624252305927
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: env_4ee827fa0e5700509d0ac9d64460d70458a1d146
     parentId: wrk_b11cd818ef01466faf58583b61a375cd
     modified: 1624252287034

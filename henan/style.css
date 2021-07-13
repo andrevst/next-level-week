@@ -1,0 +1,482 @@
+/* ===================================================Reset da página====================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===================================================Variaveis====================================================== */
+:root {
+  --header-height: 4.5rem;
+
+  --hue: 159;
+  /* Cores */
+  --head-color: hsl(27, 100%, 50%);
+  --title-color: hsl(0, 0%, 100%);
+  --button-color: hsl(0, 100%, 50%);
+  --text1-color: hsl(0, 0%, 100%);
+  --text2-color: hsl(27, 100%, 50%);
+  --text3-color: hsl(0, 0%, 0%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+}
+
+/* ===================================================Cor da página====================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 1rem 'Bodoni Moda', serif;
+  color: var(--text3-color);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================================================Textos da página============================================= */
+p {
+  color: #3514c7;
+  font: 700 1.15rem 'Bodoni Moda', serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+h1 {
+  font: 700 1.875rem 'Crimson text', serif;
+  color: var(--head-color);
+  -webkit-font-smoothing: auto;
+}
+
+.title {
+  font: 700 2.3rem 'Crimson text', serif;
+  color: black;
+}
+
+.logo {
+  font-style: italic;
+  font: 700 1.7rem 'Bodoni Moda', serif;
+  color: white;
+}
+
+/* ===================================================Imagens====================================================== */
+img {
+  margin-left: 9rem;
+  width: 80%;
+  height: auto;
+}
+
+/* ===================================================Buttons da página====================================================== */
+.button {
+  background-color: var(--button-color);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #ff7200;
+}
+
+/* ===================================================Divisor====================================================== */
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
+}
+
+/* ===================================================Layout====================================================== */
+
+.container {
+  width: 95%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section .header {
+  margin-bottom: 4rem;
+}
+
+#header {
+  border-bottom: 1px solid #ff7200;
+  background: var(--head-color);
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #ff7200;
+  width: 100%;
+}
+
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+}
+
+/* ===================================================Navigation====================================================== */
+nav {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #3514c7;
+
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #3514c7;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+nav .menu ul {
+  display: none;
+}
+
+/* ===================================================Mostrar menu====================================================== */
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: linear-gradient(180deg, hsl(27, 100%, 50%), hsl(0, 0%, 100%));
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+/* ===================================================interruptor do menu====================================================== */
+.toggle {
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+  transition: 0.2s;
+}
+
+nav.show .icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+}
+/* ===================================================Início da página====================================================== */
+#home {
+  overflow: hidden;
+  background: linear-gradient(180deg, hsl(27, 100%, 50%), hsl(0, 0%, 100%));
+}
+
+#home .container {
+  margin: 0;
+}
+
+#home .image {
+  position: relative;
+  margin-top: 4.5rem;
+}
+
+#home .image::before {
+  content: '';
+  height: 90%;
+  width: 78%;
+  background: #3514c7;
+  position: absolute;
+  top: -8%;
+  left: 12%;
+  z-index: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: 4rem;
+}
+
+#home .image img,
+#home .image::before {
+  border-radius: 0.25rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+/* ===============================================Sobre====================================================== */
+#about {
+  background: linear-gradient(180deg, hsl(27, 100%, 50%), hsl(0, 0%, 100%));
+}
+
+#about .container {
+  margin: 0;
+  padding: 0;
+}
+
+#about .image {
+  position: relative;
+  height: auto;
+}
+
+#about .image::before {
+  content: '';
+  height: 90%;
+  width: 78%;
+  background: #3514c7;
+  position: absolute;
+  top: -7%;
+  left: 4.2%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+  right: 6rem;
+  width: 80%;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* ===================================================Serviços====================================================== */
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px black;
+  border-bottom: o.25rem solid black;
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: black;
+}
+
+.card .title {
+  font-size: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+#services {
+  background: linear-gradient(180deg, hsl(27, 100%, 50%), hsl(0, 0%, 100%));
+}
+
+#services .title {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#services p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* =================================================Depoimentos====================================================== */
+#testimonials {
+  background: linear-gradient(180deg, hsl(27, 100%, 50%), hsl(0, 0%, 100%));
+}
+
+#testimonials .container {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px black;
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+
+#testimonials blockquote p span {
+  font: 700 3rem serif;
+
+  position: absolute;
+  top: -0.5rem;
+  left: -1.875rem;
+  color: black;
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+/* Swiper */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: black;
+}
+
+/* =================================================Contato====================================================== */
+
+#contact {
+  background: linear-gradient(180deg, hsl(27, 100%, 50%), hsl(0, 0%, 100%));
+}
+
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: blue;
+}
+
+#contact h2 {
+  font-size: 2rem;
+}
